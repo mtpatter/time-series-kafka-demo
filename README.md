@@ -52,7 +52,7 @@ or with Docker:
 
 ```
 docker run -it --rm \
-      -v $PWD:/home
+      -v $PWD:/home \
       --network=host \
       kafkacsv python bin/processStream.py my-stream
 ```
@@ -62,7 +62,7 @@ docker run -it --rm \
 Send time series from data/data.csv to topic “my-stream”, and speed it up by a factor of 10.
 
 ```
-python bin/sendStream.py data/data.csv my-stream 10
+python bin/sendStream.py data/data.csv my-stream --speed 10
 ```
 
 or with Docker:
@@ -71,7 +71,7 @@ or with Docker:
 docker run -it --rm \
       -v $PWD:/home \
       --network=host \
-      kafkacsv python bin/sendStream.py data/data.csv my-stream
+      kafkacsv python bin/sendStream.py data/data.csv my-stream --speed 10
 ```
 
 **Shut down and clean up**

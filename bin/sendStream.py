@@ -26,7 +26,7 @@ def main():
                         help='Time series csv file.')
     parser.add_argument('topic', type=str,
                         help='Name of the Kafka topic to stream.')
-    parser.add_argument('speed', type=int,
+    parser.add_argument('--speed', type=float, default=1, required=False,
                         help='Speed up time series by a given multiplicative factor.')
     args = parser.parse_args()
 
