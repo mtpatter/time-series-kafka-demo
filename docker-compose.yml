@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:6.2.0
+    environment:
+      - ZOOKEEPER_CLIENT_PORT=32181
+    ports:
+      - "32181:32181"
+
+  kafka:
+    image: confluentinc/cp-kafka:6.2.0
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:32181
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
+    ports:
+      - "9092:9092"
+    restart: on-failure
+    depends_on:
+      - zookeeper
