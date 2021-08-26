@@ -12,6 +12,7 @@ def main():
 
     np.random.seed(42)
     df['value'] = np.random.randint(0, 100, size=(len(date_rng)))
+    df = df.sample(frac=0.5, random_state=42).sort_values(by=['timestamp'])
     df.to_csv('data.csv', index=False)
     return
 
