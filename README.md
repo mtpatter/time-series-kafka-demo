@@ -1,7 +1,11 @@
 time-series-kafka-demo
 ============
 
+![img](assets/cartoon-csv-kafka.jpeg)
+
 Mock stream producer for time series data using Kafka.
+
+I walk through this tutorial and others on my [Medium blog](https://maria-patterson.medium.com/).  Here is a friend link for open access to the article on Towards Data Science: [*Make a mock “real-time” data stream with Python and Kafka*](https://towardsdatascience.com/make-a-mock-real-time-stream-of-data-with-python-and-kafka-7e5e23123582?sk=7ccd7b3383969c2b52c6606c12054c32).  I'll always add friend links to my GitHub tutorials for free Medium access, but if you'd like to sign up for a Medium membership, I'd be grateful if you could use my [membership referral link](https://maria-patterson.medium.com/membership) to contribute to my Saturday morning fancy coffee fund.
 
 This repo demos how to convert a csv file of timestamped data into a real-time stream useful for testing streaming analytics.
 An example input file with random time series data and a script for generating the file are included in the data directory.
