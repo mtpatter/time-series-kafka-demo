@@ -1,5 +1,4 @@
 FROM python:3.9.5
-LABEL maintainer "maria.t.patterson@gmail.com"
 ENV REFRESHED_AT 2021-08-15
 
 
